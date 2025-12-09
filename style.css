@@ -1,0 +1,217 @@
+/* style.css - วางที่ C:\xampp\htdocs\lostfound\style.css */
+
+/* Reset / basics */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#f8f5fb 0%, #fff 40%);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Container */
+.wrapper {
+  max-width: 1000px;
+  margin: 110px auto 60px;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 72px;
+  background: linear-gradient(90deg,#1b0b1f 0%, #2a1028 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+}
+
+/* Logo */
+.logo {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-right: 6px;
+}
+.logo .icon {
+  width:48px; height:48px;
+  background: radial-gradient(circle at 30% 30%, #ffd2e9 0%, #ffb6da 40%, #000 60%);
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25), inset 0 -6px 12px rgba(255,255,255,0.06);
+}
+.logo .title {
+  font-weight:700;
+  letter-spacing:0.4px;
+  color:#fff;
+}
+
+/* Nav */
+.nav {
+  margin-left: auto;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+/* cute button in header */
+.header-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  border: 2px solid rgba(255,255,255,0.12);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  color: #fff;
+  text-decoration:none;
+  font-weight:600;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.header-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.28); }
+
+/* Accent small badge */
+.badge {
+  background: #ff7ab6;
+  color: #fff;
+  padding:3px 8px;
+  border-radius: 999px;
+  font-size:12px;
+  font-weight:700;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* Card style */
+.card {
+  background: linear-gradient(180deg,#fff 0%, #fffefa 100%);
+  border-radius:18px;
+  padding: 22px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px rgba(28,12,30,0.04);
+}
+
+/* Hero */
+.hero {
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:space-between;
+}
+.hero-left { flex:1; }
+.hero h1 {
+  font-size:28px;
+  color:#13041a;
+  margin-bottom:8px;
+}
+.hero p { color:#4b3b4b; margin-bottom:12px; }
+
+/* hero buttons */
+.hero-buttons { display:flex; gap:12px; flex-wrap:wrap; }
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 16px;
+  border-radius: 14px;
+  font-weight:700;
+  border: none;
+  cursor:pointer;
+  box-shadow: 0 8px 18px rgba(22,7,28,0.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+  text-decoration:none;
+  color: #fff;
+}
+
+/* Kuromi palette */
+.btn-primary {
+  background: linear-gradient(180deg,#ff8ccf 0%, #ff62ad 100%);
+  color:#fff;
+  box-shadow: 0 10px 30px rgba(255,98,173,0.18);
+}
+.btn-secondary {
+  background: linear-gradient(180deg,#2a1324 0%, #3b1933 100%);
+  color:#ffdbe9;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+}
+.btn-outline {
+  background: transparent;
+  color:#2a1324;
+  border:2px dashed rgba(42,19,36,0.12);
+  box-shadow:none;
+}
+
+.btn:hover { transform: translateY(-4px); }
+
+/* Inputs - centered text */
+.form-group { margin-bottom:12px; }
+label { display:block; margin-bottom:6px; font-weight:600; color:#2a1324; }
+input[type="text"], input[type="password"], input[type="date"], textarea, select {
+  width:100%;
+  padding:12px 14px;
+  border-radius:12px;
+  border:2px solid rgba(42,19,36,0.06);
+  background: linear-gradient(180deg,#fff 0%, #fff 100%);
+  font-size:14px;
+  text-align:center;              /* <-- ตัวอักษรให้อยู่ตรงกลาง */
+  color:#2a1324;
+  outline:none;
+  transition: box-shadow .12s ease, transform .08s ease;
+}
+textarea { min-height:90px; text-align:center; padding-top:12px; }
+
+/* Focus */
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 6px 18px rgba(42,19,36,0.08);
+  transform: translateY(-2px);
+}
+
+/* Form actions */
+.form-actions { margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; }
+
+/* Table */
+.table { width:100%; border-collapse: collapse; margin-top:10px; }
+.table th, .table td { padding:10px; border-bottom:1px solid rgba(0,0,0,0.06); text-align:center; }
+.table thead { background:#f9f0f8; color:#2a1324; }
+
+/* Footer */
+.site-footer { text-align:center; color:#7a6a77; margin-top:20px; }
+
+/* Cute corner pattern (Kuromi motif) */
+.corner {
+  position:absolute;
+  right: -40px;
+  top: -40px;
+  width:140px;
+  height:140px;
+  background: radial-gradient(circle at 30% 30%, #ffb6da 0%, rgba(0,0,0,0) 50%);
+  border-radius: 50%;
+  opacity: 0.09;
+  transform: rotate(20deg);
+}
+
+/* Layout responsiveness */
+@media (max-width:900px) {
+  .hero { flex-direction:column; align-items:flex-start; }
+  .logo .title { font-size:16px; }
+  .header-inner { padding: 8px 12px; }
+  .wrapper { margin-top:120px; }
+}
